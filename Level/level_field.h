@@ -33,3 +33,10 @@ public:
 private:
     std::vector<std::vector<bool>> field_;
 };
+
+enum class Path {
+    left,
+    right,
+    down,
+    up
+};

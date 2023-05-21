@@ -1,3 +1,4 @@
-//
-// Created by evgeniy on 9.5.23.
-//
+#include "hero.h"
+
+Hero::Hero(LevelField *field, const QPoint &startPosition) : field_(field), currentPosition_(startPosition) {}
+

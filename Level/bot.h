@@ -1,8 +1,7 @@
-//
-// Created by evgeniy on 9.5.23.
-//
+#pragma once
 
-#ifndef PACMAN_BOT_H
-#define PACMAN_BOT_H
+class Bot {
+public:
 
-#endif //PACMAN_BOT_H
+private:
+};

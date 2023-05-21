@@ -47,7 +47,9 @@ bool LevelField::isWall(const QPoint &position) const {
     return isWall(position.x(), position.y());
 }
 
-LevelField::LevelField() : field_() {}
+LevelField::LevelField() : field_() {
+
+}
 
 int LevelField::height() const {
     return static_cast<int>(field_.size());
