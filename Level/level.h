@@ -5,10 +5,12 @@
 
 class Level {
 public:
-    Level();
+    Level(const LevelField &field);
+
+    Hero &getHero();
 
 private:
+    LevelField field_;
     std::vector<Bot> ghosts_;
     Hero hero_;
-    const LevelField *field_;
 };

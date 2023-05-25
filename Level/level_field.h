@@ -12,7 +12,7 @@ public:
 
     LevelField(int width, int height);
 
-    LevelField(const std::vector<std::vector<bool>> &field);
+    LevelField(const std::vector<std::vector<bool>> &field, int scale);
 
     const std::vector<std::vector<bool>> &getMatrix() const;
 
@@ -26,12 +26,15 @@ public:
 
     int width() const;
 
+    void setScale(int scale);
+
     bool isWall(int x, int y) const;
 
     bool isWall(const QPoint &position) const;
 
 private:
     std::vector<std::vector<bool>> field_;
+    int scale_ = 1;
 };
 
 enum class Path {

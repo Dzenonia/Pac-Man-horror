@@ -1,0 +1,25 @@
+<RCC>
+    <qresource>
+        <file>resources/a1.png</file>
+        <file>resources/a2.png</file>
+        <file>resources/a3.png</file>
+        <file>resources/a4.png</file>
+        <file>resources/a5.png</file>
+        <file>resources/a6.png</file>
+        <file>resources/b2.png</file>
+        <file>resources/b3.png</file>
+        <file>resources/b4.png</file>
+        <file>resources/b5.png</file>
+        <file>resources/b6.png</file>
+        <file>resources/c2.png</file>
+        <file>resources/c3.png</file>
+        <file>resources/c4.png</file>
+        <file>resources/c5.png</file>
+        <file>resources/c6.png</file>
+        <file>resources/d2.png</file>
+        <file>resources/d3.png</file>
+        <file>resources/d4.png</file>
+        <file>resources/d5.png</file>
+        <file>resources/d6.png</file>
+    </qresource>
+</RCC>

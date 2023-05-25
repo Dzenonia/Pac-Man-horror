@@ -9,18 +9,21 @@
 #include <QMainWindow>
 #include "View/view.h"
 #include "Controller/controller.h"
+#include <QKeyEvent>
 
 class MainWindow : public QMainWindow {
 Q_OBJECT
 public:
     MainWindow(QWidget *parent = nullptr);
 
-private:
-    QWidget* showWidget_;
-//    Controller* controller_;
-    Scene* scene_;
-    View* view_;
-    QComboBox* mode_;
-    QGridLayout* layout_;
+    void keyPressEvent(QKeyEvent *event) override;
 
+private:
+    QWidget *showWidget_;
+//    Controller* controller_;
+    Scene *scene_;
+    View *view_;
+    QComboBox *mode_;
+    QGridLayout *layout_;
+    Controller *controller_;
 };
