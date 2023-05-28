@@ -7,12 +7,21 @@
 #include <QGridLayout>
 #include <QLayout>
 #include <QMainWindow>
+#include "../Level/level.h"
+#include <QGraphicsItem>
+#include "../GraphicsOgjects/GraphicsCoin.h"
+#include <QMouseEvent>
 
 
-class Scene : public QGraphicsScene {
+class LevelScene : public QGraphicsScene {
 Q_OBJECT
 public:
-    Scene(QObject *parent = nullptr);
+    LevelScene(QObject *parent = nullptr);
+
+    void generateCoins(const Level &level);
+
+    void mouseMoveEvent(QMouseEvent *event);
 
 private:
+    std::vector<std::vector<GraphicsCoin *>> coinObjects_;
 };

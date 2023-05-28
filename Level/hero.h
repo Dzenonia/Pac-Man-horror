@@ -11,6 +11,8 @@ public:
 
     void setVec(Path vec);
 
+    Path getVec() const;
+
 private:
     const LevelField *const field_;
     QPoint currentPosition_;

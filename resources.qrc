@@ -21,5 +21,7 @@
         <file>resources/d4.png</file>
         <file>resources/d5.png</file>
         <file>resources/d6.png</file>
+        <file>resources/coin.png</file>
+        <file>resources/dot.png</file>
     </qresource>
 </RCC>

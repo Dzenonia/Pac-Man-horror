@@ -37,12 +37,17 @@ std::vector<QPoint> LevelField::wallCells() const {
     return result;
 }
 
+bool LevelField::isWallNotScale(int x, int y) const {
+    if (x < 0 || x >= field_.size() || y < 0 || y >= field_[0].size()) {
+        return true;
+    }
+    return field_[x][y];
+}
+
 bool LevelField::isWall(int x, int y) const {
-    qDebug() << x << " 0000000000 " << y;
     if ((x % scale_) != 0 && (y % scale_) != 0) {
         return true;
     }
-    qDebug() << "  oooooooooo " << x << " " << y;
 //    x += scale_ - 1;
 //    y += scale_ - 1;
     int x1 = (x + scale_ - 1) / scale_;

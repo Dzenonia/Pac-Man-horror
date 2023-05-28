@@ -21,7 +21,7 @@ public:
 private:
     QWidget *showWidget_;
 //    Controller* controller_;
-    Scene *scene_;
+    LevelScene *scene_;
     View *view_;
     QComboBox *mode_;
     QGridLayout *layout_;

@@ -69,3 +69,7 @@ QPoint Hero::next(const QPoint &position, Path vec) const {
     }
 }
 
+Path Hero::getVec() const {
+    return vec_;
+}
+

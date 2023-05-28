@@ -6,7 +6,7 @@
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent),
                                           showWidget_(new QWidget(this)),
-                                          scene_(new Scene(this)),
+                                          scene_(new LevelScene(this)),
                                           view_(new View(scene_)),
                                           layout_(new QGridLayout()),
                                           controller_(new Controller(view_, scene_)) {

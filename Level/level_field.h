@@ -32,6 +32,8 @@ public:
 
     bool isWall(const QPoint &position) const;
 
+    bool isWallNotScale(int i, int j) const;
+
 private:
     std::vector<std::vector<bool>> field_;
     int scale_ = 1;

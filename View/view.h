@@ -14,11 +14,10 @@
 class View : public QGraphicsView {
 Q_OBJECT
 public:
-    View(Scene *scene = nullptr);
+    View(LevelScene *scene = nullptr);
 
 
 protected:
-    void mouseMoveEvent(QMouseEvent *event) override;
 
     void resizeEvent(QResizeEvent *event) override {
         QGraphicsView::resizeEvent(event);

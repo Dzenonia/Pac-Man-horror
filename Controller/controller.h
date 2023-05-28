@@ -17,7 +17,7 @@
 class Controller : public QWidget {
 Q_OBJECT
 public:
-    Controller(View *view, Scene *scene);
+    Controller(View *view, LevelScene *scene);
 
 
     void timerEvent(QTimerEvent *event) override;
@@ -78,11 +78,10 @@ public:
 
 private:
     const int cellSize_ = 20;
-
+    Level level_;
     QBasicTimer timer_;
-    Scene *scene_;
+    LevelScene *scene_;
     View *view_;
     GraphicsHero *hero_;
-    Level level_;
 
 };
