@@ -31,14 +31,6 @@ void GraphicsGhost::paint(QPainter *painter, const QStyleOptionGraphicsItem *opt
             break;
     }
     painter->restore();
-//    painter->save();
-//
-//
-//    painter->setBrush(Qt::yellow);
-//    painter->setPen(Qt::NoPen);
-//    painter->drawEllipse(currentPosition_ + QPointF(size_ / 2, size_ / 2), size_ / 2, size_ / 2);
-//
-//    painter->restore();
 }
 
 GraphicsGhost::GraphicsGhost(int size, const Hero *hero) : size_(size), currentPosition_(size * (hero->getPos() / 100)),
@@ -60,4 +52,8 @@ GraphicsGhost::GraphicsGhost(int size, const Hero *hero) : size_(size), currentP
 
 void GraphicsGhost::setPos(const QPointF &pos) {
     currentPosition_ = pos;
+}
+
+QRectF GraphicsGhost::boundingRect() const {
+    return QRectF(0, 0, size_, size_);
 }

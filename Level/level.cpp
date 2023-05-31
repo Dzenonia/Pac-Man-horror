@@ -1,9 +1,10 @@
 #include "level.h"
 
-Level::Level(const LevelField &field) : field_(field), hero_(&field_, QPoint(100, 100), 10),
+Level::Level(const LevelField &field) : field_(field), hero_(&field_, field.freeCells()[0] * 100, 10),
                                         hasPoint_(field_.getMatrix()), levelGraph_(field_) {
 
-    ghosts_.push_back(Bot(&field_, QPoint(field.height() * 100 - 200, field.width() * 100 - 200), 10));
+    ghosts_.push_back(Bot(&field_, field.freeCells().back() * 100, 10));
+    countCoin_ = field_.freeCells().size();
 }
 
 Hero &Level::getHero() {
@@ -23,9 +24,14 @@ std::vector<Bot> &Level::getGhosts() {
 }
 
 bool Level::eatDot(int i, int j) {
-    qDebug() << i << " kkkkk " << j;
     bool dot = hasPoint_[i][j];
+    countCoin_ -= !dot;
     hasPoint_[i][j] = 1;
     return !dot;
+}
+
+
+int Level::getCountCoin() const {
+    return countCoin_;
 }
 

@@ -92,8 +92,6 @@ std::vector<QPoint> LevelGraph::getVertexEdges(int x, int y) const {
 }
 
 Path LevelGraph::getNext(const QPoint &from, const QPoint &to) {
-    qDebug() << from << " " << to << " POSITIONS" << " " << int(next_[{{from.x(), from.y()},
-                                                                       {to.x(),   to.y()}}]);
     return next_[{{from.x(), from.y()},
                   {to.x(),   to.y()}}];
 }

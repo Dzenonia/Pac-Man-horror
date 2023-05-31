@@ -31,7 +31,7 @@ find_package(Qt6 COMPONENTS
         REQUIRED)
 
 add_executable(PacMan
-        main.cpp main_window.cpp main_window.h Level/level_field.cpp Level/level_field.h Level/field_generator.cpp Level/field_generator.h Level/bot.cpp Level/bot.h Level/hero.cpp Level/level_graph.cpp Level/level_graph.h Controller/controller.cpp Controller/controller.h View/view.cpp View/view.h View/scene.cpp View/scene.h Level/level.cpp Level/level.h Level/hero.h GraphicsOgjects/GraphicsField.cpp GraphicsOgjects/GraphicsField.h GraphicsOgjects/Pac-Man.cpp GraphicsOgjects/Pac-Man.h Level/fieldF.cpp Level/fieldF.h
+        main.cpp main_window.cpp main_window.h Level/level_field.cpp Level/level_field.h Level/field_generator.cpp Level/field_generator.h Level/bot.cpp Level/bot.h Level/hero.cpp Level/level_graph.cpp Level/level_graph.h Controller/controller.cpp Controller/controller.h View/view.cpp View/view.h View/scene.cpp View/scene.h Level/level.cpp Level/level.h Level/hero.h GraphicsOgjects/GraphicsField.cpp GraphicsOgjects/GraphicsField.h GraphicsOgjects/Pac-Man.cpp GraphicsOgjects/Pac-Man.h
         resources.qrc GraphicsOgjects/GraphicsCoin.cpp GraphicsOgjects/GraphicsCoin.h rays/my_scene.cpp rays/graphics_polygon.cpp rays/polygon.cpp
         rays/ray.cpp rays/my_view.cpp rays/controllerRays.cpp GraphicsOgjects/score.cpp GraphicsOgjects/score.h GraphicsOgjects/GraphicsGhost.cpp GraphicsOgjects/GraphicsGhost.h)
 

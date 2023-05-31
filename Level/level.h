@@ -20,10 +20,14 @@ public:
 
     bool eatDot(int i, int j);
 
+    int getCountCoin() const;
+
 private:
     LevelField field_;
     std::vector<Bot> ghosts_;
     Hero hero_;
     std::vector<std::vector<bool>> hasPoint_;
     LevelGraph levelGraph_;
+
+    int countCoin_;
 };

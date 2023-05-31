@@ -31,17 +31,10 @@ void GraphicsHero::paint(QPainter *painter, const QStyleOptionGraphicsItem *opti
             break;
     }
     painter->restore();
-//    painter->save();
-//
-//
-//    painter->setBrush(Qt::yellow);
-//    painter->setPen(Qt::NoPen);
-//    painter->drawEllipse(currentPosition_ + QPointF(size_ / 2, size_ / 2), size_ / 2, size_ / 2);
-//
-//    painter->restore();
 }
 
-GraphicsHero::GraphicsHero(int size, const Hero *hero) : size_(size), currentPosition_(size, size), hero_(hero),
+GraphicsHero::GraphicsHero(int size, const Hero *hero) : size_(size), currentPosition_(size * hero->getPos() / 100),
+                                                         hero_(hero),
                                                          currentVec_(Path::right), pos_(0), sg_(1) {
     animationR_.push_back(QPixmap(":resources/a1.png"));
     animationR_.push_back(QPixmap(":resources/a2.png"));
@@ -74,6 +67,4 @@ GraphicsHero::GraphicsHero(int size, const Hero *hero) : size_(size), currentPos
 
 void GraphicsHero::setPos(const QPointF &pos) {
     currentPosition_ = pos;
-//    qDebug() << " !!!!!!!!!!!!!!!!!! " << currentPosition_;
-
 }

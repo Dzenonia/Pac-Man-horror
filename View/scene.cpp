@@ -9,7 +9,6 @@ void LevelScene::generateCoins(const Level &level) {
                         std::vector<GraphicsCoin *>(
                                 level.getField().width(),
                                 nullptr));
-    qDebug() << level.getField().getMatrix().size();
     for (int i = 0; i < level.getField().height(); ++i) {
         for (int j = 0; j < level.getField().width(); ++j) {
             if (!level.getField().getMatrix()[i][j]) {

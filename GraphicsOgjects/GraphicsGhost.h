@@ -23,9 +23,7 @@ public:
     void setPos(const QPointF &pos);
 
 protected:
-    QRectF boundingRect() const override {
-        return QRectF(0, 0, size_, size_);
-    }
+    QRectF boundingRect() const override;
 
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 

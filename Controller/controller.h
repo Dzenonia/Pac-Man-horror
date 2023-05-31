@@ -101,5 +101,5 @@ private:
 
     void setUpScene();
 
-    void recheckHero(const Hero *const hero);
+    void theEnd();
 };
