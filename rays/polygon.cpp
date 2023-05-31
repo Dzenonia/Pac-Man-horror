@@ -41,7 +41,7 @@ std::optional<QPointF> Polygon::intersectRay(const Ray& ray) const {
         const QPointF point = QPointF(x, y);
 
         Q_ASSERT(fabs(a1 * x + b1 * y - c1) <= eps);
-        Q_ASSERT(fabs(a2 * x + b2 * x - c2) <= eps);
+        Q_ASSERT(fabs(a2 * x + b2 * y - c2) <= eps);
 
 
         if (!isPointOnLine(QPointF(x, y), begin, end)

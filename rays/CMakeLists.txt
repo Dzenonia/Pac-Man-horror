@@ -18,7 +18,7 @@ add_executable(rays
         main_window.cpp
         ray.cpp
         polygon.cpp
-        controller.cpp
+        controllerRays.cpp
         my_view.cpp
         my_scene.cpp
         tests.cpp graphics_polygon.cpp)

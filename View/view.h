@@ -9,12 +9,13 @@
 #include <QMainWindow>
 #include "scene.h"
 #include <QResizeEvent>
+#include "../rays/my_view.h"
 
 
-class View : public QGraphicsView {
+class ViewLevel : public GraphicsView {
 Q_OBJECT
 public:
-    View(LevelScene *scene = nullptr);
+    ViewLevel(LevelScene *scene = nullptr);
 
 
 protected:
@@ -24,6 +25,8 @@ protected:
         scene()->setSceneRect(QRectF(QPoint(0, 0), QPoint(event->size().width(), event->size().height())));
 //        fitInView(scene()->sceneRect(), Qt::KeepAspectRatio);
     }
+
+
 
 private:
 };

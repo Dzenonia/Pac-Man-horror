@@ -1,6 +1,6 @@
 #include "scene.h"
 
-LevelScene::LevelScene(QObject *parent) : QGraphicsScene(parent) {
+LevelScene::LevelScene(QObject *parent) : GraphicsScene(parent) {
 
 }
 
@@ -25,4 +25,12 @@ void LevelScene::generateCoins(const Level &level) {
 
 void LevelScene::mouseMoveEvent(QMouseEvent *event) {
     qDebug() << event->pos();
+}
+
+void LevelScene::eatCoin(int i, int j) {
+    if (coinObjects_[i][j] == nullptr) {
+        return;
+    }
+    delete coinObjects_[i][j];
+    coinObjects_[i][j] = nullptr;
 }

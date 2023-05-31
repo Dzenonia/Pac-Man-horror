@@ -73,3 +73,11 @@ Path Hero::getVec() const {
     return vec_;
 }
 
+int Hero::getSpeed() const {
+    return speed_;
+}
+
+QPoint Hero::getPos() const {
+    return currentPosition_;
+}
+

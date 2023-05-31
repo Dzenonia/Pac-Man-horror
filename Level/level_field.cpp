@@ -80,3 +80,35 @@ int LevelField::width() const {
 void LevelField::setScale(int scale) {
     scale_ = scale;
 }
+
+std::vector<Polygon> LevelField::getPolygons(double cellSize) const {
+    std::vector<Polygon> res;
+    for (int i = 0; i < height(); ++i) {
+        for (int j = 0; j < width(); ++j) {
+            if (!field_[i][j]) {
+                continue;
+            }
+            Polygon newPolygon({QPointF(j * cellSize, i * cellSize), QPointF(j * cellSize + cellSize, i * cellSize),
+                                QPointF(j * cellSize + cellSize, i * cellSize),
+                                QPointF(j * cellSize + cellSize, i * cellSize + cellSize)});
+            res.push_back(newPolygon);
+        }
+    }
+    return res;
+}
+
+std::vector<Polygon> LevelField::nearPolygons(double cellSize, int x, int y) const {
+    std::vector<Polygon> res;
+    for (int i = x - maxStep; i <= x + maxStep; ++i) {
+        for (int j = y - maxStep; j <= y + maxStep; ++j) {
+            if (i <= 0 || i >= field_.size() || j <= 0 || j >= field_[0].size() || !isWallNotScale(i, j)) {
+                continue;
+            }
+            Polygon newPolygon({QPointF(j * cellSize, i * cellSize), QPointF(j * cellSize + cellSize, i * cellSize),
+                                QPointF(j * cellSize + cellSize, i * cellSize + cellSize),
+                                QPointF(j * cellSize, i * cellSize + cellSize)});
+            res.push_back(newPolygon);
+        }
+    }
+    return res;
+}

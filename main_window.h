@@ -13,6 +13,10 @@
 
 class MainWindow : public QMainWindow {
 Q_OBJECT
+    enum class scene {
+        level,
+        menu,
+    };
 public:
     MainWindow(QWidget *parent = nullptr);
 
@@ -20,10 +24,10 @@ public:
 
 private:
     QWidget *showWidget_;
-//    Controller* controller_;
+//    ControllerRays* controller_;
     LevelScene *scene_;
-    View *view_;
+    ViewLevel *view_;
     QComboBox *mode_;
     QGridLayout *layout_;
-    Controller *controller_;
+    ControllerLevel *controller_;
 };

@@ -23,5 +23,13 @@
         <file>resources/d6.png</file>
         <file>resources/coin.png</file>
         <file>resources/dot.png</file>
+        <file>resources/reddown1.png</file>
+        <file>resources/reddown2.png</file>
+        <file>resources/redleft1.png</file>
+        <file>resources/redleft2.png</file>
+        <file>resources/redright1.png</file>
+        <file>resources/redright2.png</file>
+        <file>resources/redup1.png</file>
+        <file>resources/redup2.png</file>
     </qresource>
 </RCC>

@@ -13,11 +13,16 @@
 #include <QObject>
 #include <QBasicTimer>
 #include <QKeyEvent>
+#include "../rays/controllerRays.h"
+#include "../GraphicsOgjects/GraphicsGhost.h"
 
-class Controller : public QWidget {
+typedef long long ll;
+
+
+class ControllerLevel : public QWidget {
 Q_OBJECT
 public:
-    Controller(View *view, LevelScene *scene);
+    ControllerLevel(ViewLevel *view, LevelScene *scene);
 
 
     void timerEvent(QTimerEvent *event) override;
@@ -81,7 +86,20 @@ private:
     Level level_;
     QBasicTimer timer_;
     LevelScene *scene_;
-    View *view_;
+    ViewLevel *view_;
     GraphicsHero *hero_;
+    ControllerRays rays_;
+    QGraphicsTextItem *score_;
+    QGraphicsEllipseItem *light_;
+    GraphicsGhost *ghost_;
+    int countIter_;
 
+private:
+    void recheckScore(ll val);
+
+    void setUpScore();
+
+    void setUpScene();
+
+    void recheckHero(const Hero *const hero);
 };

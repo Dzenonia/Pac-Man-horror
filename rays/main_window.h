@@ -1,5 +1,5 @@
 #pragma once
-#include "controller.h"
+#include "controllerRays.h"
 #include "graphics_polygon.h"
 #include "my_view.h"
 #include <QComboBox>

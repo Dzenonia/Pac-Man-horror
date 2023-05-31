@@ -38,15 +38,17 @@ public:
         const int numRows = fieldMatrix_.size();
         const int numCols = fieldMatrix_[0].size();
 
+        painter->fillRect(0, 0, numCols * cellSize_, numRows * cellSize_, QColor(0, 0, 0));
+
         for (int row = 0; row < numRows; ++row) {
             for (int col = 0; col < numCols; ++col) {
                 QColor color;
                 if (fieldMatrix_[row][col] == 1) {
-                    color = QColor(255, 0, 0); // синий цвет
+                    continue;
                 } else {
                     color = QColor(0, 0, 0); // черный цвет
                 }
-                painter->fillRect(col * cellSize_, row * cellSize_, cellSize_, cellSize_, color);
+                painter->fillRect(col * cellSize_ * 1.0, row * cellSize_ * 1.0, cellSize_, cellSize_ * 1.0, color);
             }
         }
 

@@ -7,13 +7,13 @@
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent),
                                           showWidget_(new QWidget(this)),
                                           scene_(new LevelScene(this)),
-                                          view_(new View(scene_)),
+                                          view_(new ViewLevel(scene_)),
                                           layout_(new QGridLayout()),
-                                          controller_(new Controller(view_, scene_)) {
+                                          controller_(new ControllerLevel(view_, scene_)) {
     qDebug() << screen()->size();
 //    resize(screen()->size());
     setWindowTitle("PAC-MAN-DUMDUM");
-//    showFullScreen();
+    showFullScreen();
 //    mode_->addItem("light");
 //    mode_->addItem("polygons");
 //    mode_->addItem("static-lights");
@@ -83,6 +83,9 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
             break;
         case Qt::Key_D:
             controller_->keyPress(Path::right);
+            break;
+        case Qt::Key_Escape:
+            exit(0);
             break;
     }
 }

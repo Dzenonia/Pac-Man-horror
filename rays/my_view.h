@@ -4,6 +4,7 @@
 #include <QGraphicsEllipseItem>
 #include <QGraphicsView>
 
+
 class GraphicsView : public QGraphicsView {
     Q_OBJECT
 
@@ -11,7 +12,7 @@ public:
     enum class Mode { light, polygons, staticLight };
 
 public:
-    GraphicsView(GraphicsScene* scene, int countDynamicLights = 1);
+    GraphicsView(GraphicsScene* scene, int countDynamicLights = 0);
 
 
     void setLightMode();
@@ -48,6 +49,7 @@ private:
     GraphicsScene* scene_;
     std::vector<QGraphicsEllipseItem*> polygonsModePoints_;
     int countDynamicLights_;
+
 
     void setUpLights(int countLights);
     void pressLeftPolygons(const QPointF& cursor);

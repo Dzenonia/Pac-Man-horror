@@ -1,6 +1,7 @@
 #include "Pac-Man.h"
 
 void GraphicsHero::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) {
+    painter->save();
     if (currentVec_ != hero_->getVec()) {
         currentVec_ = hero_->getVec();
         pos_ = 0;
@@ -29,6 +30,7 @@ void GraphicsHero::paint(QPainter *painter, const QStyleOptionGraphicsItem *opti
             painter->drawPixmap(currentPosition_, animationU_[pos_]);
             break;
     }
+    painter->restore();
 //    painter->save();
 //
 //

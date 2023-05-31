@@ -13,7 +13,11 @@ public:
 
     Path getVec() const;
 
-private:
+    int getSpeed() const;
+
+    QPoint getPos() const;
+
+protected:
     const LevelField *const field_;
     QPoint currentPosition_;
     Path vec_;
